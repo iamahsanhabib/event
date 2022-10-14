@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script>
+        var viewMode = getCookie("view-mode"); if(viewMode == "desktop"){ viewport.setAttribute('content', 'width=1024'); }else if (viewMode == "mobile"){ viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no'); }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -13,22 +15,22 @@
     <title>মনোনয়ন পত্র</title>
 </head>
 <body style="margin: 20px 40px; padding: 20px;">
-        <!--div>
+    <div style="display: block;" id="frm1">
         <form action="">
             <div class="form-group">
                 <label for="name">নামঃ </label>
-                <input class="form-control" type="text" required>
+                <input class="form-control" type="text" id="name" required>
             </div>
             <div class="form-group">
                 <label for="pdesignation">পূর্ব পদবিঃ </label>
-                <select class="form-control" name="pdesignation" id="pdesignation">
+                <select class="form-control" name="pdesignation1" id="pdesignation1">
                     <option value="সভাপতি">সভাপতি</option>
                     <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
                 </select>  
             </div>
             <div class="form-group">
-                <label for="edesignation">মনোনয়ন পদবিঃ </label>
-                <select class="form-control" name="edesignation" id="edesignation">
+                <label for="edesignation1">মনোনয়ন পদবিঃ </label>
+                <select class="form-control" name="edesignation1" id="edesignation1">
                     <option value="সভাপতি">সভাপতি</option>
                     <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
                 </select>  
@@ -36,7 +38,7 @@
             <div class="row">
                 <div class="col-6 form-group">
                     <label for="year">সংগঠনে যোগদানের বছরঃ</label>
-                    <select class="form-control" name="year" id="year">
+                    <select class="form-control" name="year1" id="year1">
                         <option value="২০২২">২০২২</option>
                         <option value="২০২১">২০২১</option>
                         <option value="২০২০">২০২০</option>
@@ -44,8 +46,8 @@
                     </select>
                 </div>
                 <div class="col-6 form-group">
-                    <label for="month">সংগঠনে যোগদানের মাসঃ</label>
-                    <select class="form-control" name="month" id="month">
+                    <label for="month1">সংগঠনে যোগদানের মাসঃ</label>
+                    <select class="form-control" name="month1" id="month1">
                         <option value="জানুয়ারি">জানুয়ারি</option>
                         <option value="ফেব্রুয়ারি">ফেব্রুয়ারি</option>
                         <option value="মার্চ">মার্চ</option>
@@ -66,16 +68,16 @@
             <button class="btn btn-primary" onclick="saveInfo()">Save</button>
         </div><br><br>
         
-    </div-->
+    </div>
 
-    <div id ="text" >
+    <div id ="text" style="display: none;">
         <div style="display: flex;justify-content:space-between ;">
             <div>
                 <img src="./img/bloodbankicon.jpg" alt="ambulange" height="100px" width="100px">
             </div>
             <div style="text-align: center;">
                 <p style="font-size: 14px; margin-bottom: 0;">বিসমিল্লাহির রাহমানির রাহীম</p>
-                <p style="font-size: 30px; margin-bottom: 0; margin-top:0;">ব্লাড এইড ব্যাংক, যশোর</p>
+                <p style="font-size: 30px; margin-bottom: 0;">ব্লাড এইড ব্যাংক, যশোর</p>
                 <p style="font-size: 10px; margin-bottom: 0;">স্থাপিতঃ ১৫ নভেম্বর, ২০১৯</p>
             </div>
             <div></div>
@@ -87,14 +89,14 @@
             <div>তারিখঃ</div>
         </div>
         <div>
-            <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি মোঃ আহসান হাবীব গত নভেম্বর, ২০১৯ সাল থেকে ব্লাড এইড ব্যাংক, যশোরের একজন সদস্য। গত ২০২১-২১ অর্থবছরে
-                আমি সাধারণ সম্পাদক হিসেবে ব্লাড ব্যাংকে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে সভাপতি হিসেবে
+            <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি <span id="fname"></span> গত <span id="month"></span>, <span id="year"></span> সাল থেকে ব্লাড এইড ব্যাংক, যশোরের একজন সদস্য। গত ২০২১-২১ অর্থবছরে
+                আমি <span id="pdesignation"></span> হিসেবে ব্লাড ব্যাংকে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে <span id="edesignation"></span> হিসেবে
                 নিষ্ঠার সাথে দায়িত্ব পালন করতে ইচ্ছুক।
             </p>
         </div>
         <div>
-            <p style="text-align: justify;"> আমি আহসান হাবীব, এই মর্মে অঙ্গীকার করছি যে সংগঠনের সব রকম
-                নীতিমালা মেনে সংগঠনের সাফল্যের লক্ষ্যে আগামী ১ বছর সংগঠনের সাধারণ সম্পাদক হয়ে সংগঠনকে নিরপেক্ষভাবে
+            <p style="text-align: justify;"> আমি <span id="lname"></span>, এই মর্মে অঙ্গীকার করছি যে সংগঠনের সব রকম
+                নীতিমালা মেনে সংগঠনের সাফল্যের লক্ষ্যে আগামী ১ বছর সংগঠনের <span id="e2designation"></span> হয়ে সংগঠনকে নিরপেক্ষভাবে
                 এগিয়ে নিয়ে যাবো ও সকল গঠনতন্ত্র মেনে চলিবো।
             </p>
         </div>
@@ -108,12 +110,32 @@
 
 
 <script>
+    function saveInfo(){
+        
+        var x = document.getElementById("name").value;
+        document.getElementById("fname").innerHTML = x;
+        var y = document.getElementById("pdesignation1").value
+        document.getElementById("pdesignation").innerHTML = y;
+        z = document.getElementById("edesignation1").value
+        document.getElementById("edesignation").innerHTML = z;
+        
+        document.getElementById("e2designation").innerHTML = z;
+        a = document.getElementById("year1").value
+        document.getElementById("year").innerHTML = a;
+        b = document.getElementById("month1").value
+        document.getElementById("month").innerHTML = b;
+        document.getElementById("lname").innerHTML = x;
+        document.getElementById('frm1').style.display='none';
+        document.getElementById('text').style.display = 'block';
+        //document.getElementById("istehar").innerHTML = x.elements[3].value;
+    }
     function dwn() {
         const element = document.getElementById("text");
         //console.log(element);
+        name = 'Ahsan';
         var opt = {
         margin:       1,
-        filename:     'nomination.pdf',
+        filename:     name+'.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
