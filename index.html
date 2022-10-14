@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+<body style="margin: 100px; text-align: justify;">
+    
+
+    <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <select name="designation" id="designation">
+                <option value="chairman">Chairman</option>
+                <option value="member">Membe</option>
+        </select><br>
+        <textarea name="istehar" id="istehar" cols="30" rows="10"></textarea>
+    </form> 
+
+<button onclick="myFunction()">Save</button>
+
+
+<div class="container profile-box" id="f">
+    <!-- Code of whole cv template -->
+    <div style="text-align: justify;margin-right: 450px; margin-left: 50px; margin-top: 100px;">
+        <!--img src="./img/logo.png" alt="" style="height: 100px; width:100px"-->
+        <div>
+            <p></p>
+        </div>
+        <p id="demo"></p>
+    </div>
+    </div>
+     <div >
+            <button type="button" onclick="generatepdf()">Download Pdf</button>
+     </div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("frm1");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+
+
+    async function generatepdf(){
+    
+        var downloading=document.getElementById("f");
+        let width1 = downloading.offsetWidth;
+        let height1 = downloading.offsetHeight;
+        var doc=new jsPDF('p','pt');
+        await html2canvas(downloading,{
+            allowTaint:true,
+            useCORS:true,
+            width:width1,
+            height:height1
+            
+        }).then((canvas)=>{
+            //canvas convert to png
+            doc.addImage(canvas.toDataURL("image/png"),'PNG',10,10);
+
+        })
+        
+        doc.save("cv.pdf");
+        
+    }
+
+</script>
+
+</body>
+</html>
