@@ -24,14 +24,14 @@
         }
         .bengaliFont2 {
             font-family: 'Kalpurush';
-            font-size: 20px;
+            font-size: 16px;
         }
         .bengaliFont3 {
             font-family: 'NotoFont';
         }
     </style>
 </head>
-<body style="margin: 20px 40px; padding: 20px;">
+<body style="margin: 5px 40px; padding: 0px 20px;">
     <div style="display: block; background-color: rgb(214, 245, 235); padding: 10px; border-radius: 10px;" id="frm1">
         <form action="">
             <div class="bengaliFont2"style="text-align:center">
@@ -40,7 +40,7 @@
                 <div style="font-size: 10px;;">স্থাপিতঃ ১৫ নভেম্বর, ২০১৯</div>
                 <hr>
             </div>
-            <div class="bengaliFont2">
+            <div class="bengaliFont2" style="text-align: justify;">
                 ব্লাড এইড ব্যাংক, যশোর-এর আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে যোগদান করে
                 সংগঠনকে সামনের দিকে এগিয়ে নিতে আপনার তথ্য দিন। আপনার সম্পূর্ণ তথ্য অবশ্যই বাংলায় লিখতে
                 হবে। সহ সভাপতি অথবা সভাপতি পদে আসন লাভের জন্য অবশ্যই ২০২১-২২ অর্থবছরে আপনাকে সভাপতি, সহ-সভাপতি,
@@ -53,8 +53,8 @@
                 <input class="form-control" type="text" id="name" required>
             </div>
             <div class="form-group">
-                <label for="pdesignation">পূর্ব পদবিঃ </label>
-                <select class="form-control" name="pdesignation1" id="pdesignation1">
+                <label for="designation">পূর্ব পদবিঃ </label>
+                <select class="form-control" name="designation" id="designation">
                     <option value="সভাপতি">সভাপতি</option>
                     <option value="সহ সভাপতি">সহ সভাপতি</option>
                     <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
@@ -79,8 +79,8 @@
             </div>
             <div class="row">
                 <div class="col-4 form-group">
-                    <label for="edesignation1">মনোনয়ন পদবি-১ঃ </label>
-                    <select class="form-control" name="edesignation1" id="edesignation1">
+                    <label for="choice11">মনোনয়ন পদবি-১ঃ </label>
+                    <select class="form-control" name="choice11" id="choice11">
                         <option value="সভাপতি">সভাপতি</option>
                         <option value="সহ সভাপতি">সহ সভাপতি</option>
                         <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
@@ -104,8 +104,8 @@
                     </select> 
                 </div>
                 <div class="col-4 form-group">
-                    <label for="edesignation1">মনোনয়ন পদবি-২ঃ </label>
-                    <select class="form-control" name="edesignation1" id="edesignation1">
+                    <label for="choice21">মনোনয়ন পদবি-২ঃ </label>
+                    <select class="form-control" name="choice21" id="choice21">
                         <option value="সভাপতি">সভাপতি</option>
                         <option value="সহ সভাপতি">সহ সভাপতি</option>
                         <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
@@ -129,8 +129,8 @@
                     </select> 
                 </div>
                 <div class="col-4 form-group">
-                    <label for="edesignation1">মনোনয়ন পদবি-২ঃ </label>
-                    <select class="form-control" name="edesignation1" id="edesignation1">
+                    <label for="choice31">মনোনয়ন পদবি-৩ঃ </label>
+                    <select class="form-control" name="choice31" id="choice31">
                         <option value="সভাপতি">সভাপতি</option>
                         <option value="সহ সভাপতি">সহ সভাপতি</option>
                         <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
@@ -218,20 +218,34 @@
             <div style="font-size: 24px; font-weight: bold;">মনোনয়ন ফরম</div>
             <div>তারিখঃ<span id="date"></span></div>
         </div>
-        <div class="bengaliFont2" style="margin-top: 30px;">
-            <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি <span id="fname"></span> গত <span id="month"></span>, <span id="year"></span> সাল থেকে ব্লাড এইড ব্যাংক, যশোরের একজন সদস্য। গত ২০২১-২১ অর্থবছরে
-                আমি <span id="pdesignation"></span> হিসেবে ব্লাড এইড ব্যাংক, যশোরে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে <span id="edesignation"></span> হিসেবে
-                নিষ্ঠার সাথে দায়িত্ব পালন করতে ইচ্ছুক।
+        <div class="bengaliFont2" style="margin-top: 20px;">
+            <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি <span id="fname"></span> গত <span id="month"></span>, <span id="year"></span> সাল থেকে ব্লাড এইড ব্যাংক, যশোরের 
+                একজন সদস্য। গত ২০২১-২১ অর্থবছরে
+                আমি <span id="pdesignation"></span> হিসেবে ব্লাড এইড ব্যাংক, যশোরে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটির উপযুক্ত সদস্য হিসেবে
+                নিষ্ঠার সাথে দায়িত্ব পালন করতে ইচ্ছুক। এমতাবস্থায়, আমাকে কার্যনির্বাহী কমিটির সদস্য হিসেবে মনোনিত করার
+                জন্য আমার পছন্দক্রম প্রদান করলাম।
             </p>
         </div>
         <div class="bengaliFont2">
-            <p style="text-align: justify;"> আমি <span id="lname"></span>, এই মর্মে অঙ্গীকার করছি যে সংগঠনের সব রকম
-                নীতিমালা মেনে সংগঠনের সাফল্যের লক্ষ্যে আগামী ১ বছর সংগঠনের <span id="e2designation"></span> হয়ে সংগঠনকে নিরপেক্ষভাবে
+            <p style="text-align: justify;">অতএব, আমি <span id="lname"></span>, এই মর্মে অঙ্গীকার করছি যে সংগঠনের সব রকম
+                নীতিমালা মেনে সংগঠনের সাফল্যের লক্ষ্যে আগামী ১ বছর সংগঠনের কার্যনির্বাহী কমিটির সদস্য হয়ে সংগঠনকে নিরপেক্ষভাবে
                 এগিয়ে নিয়ে যাবো ও সকল গঠনতন্ত্র মেনে চলিবো।
             </p>
         </div>
-
-        <br>
+        <div class="bengaliFont2">
+            মনোনয়নের ক্ষেত্রে আমার পছন্দের অনুক্রমঃ
+            <p style="margin-left: 40px;">
+                ১। <span id="choice1"></span> <br>
+                ১। <span id="choice2"></span> <br>
+                ১। <span id="choice3"></span> <br>
+            </p>
+        </div>
+        <div class="bengaliFont2">
+            কাঙ্ক্ষিত পদ পেলে সংগঠন নিয়ে আমার চিন্তা-ভাবনাঃ
+            <p id="comment" style="text-align: justify;">
+                
+            </p>
+        </div>
         
     </div>
     <br>
@@ -262,18 +276,29 @@
         var x = document.getElementById("name").value;
         
         document.getElementById("fname").innerHTML = x;
-        var y = document.getElementById("pdesignation1").value
-        document.getElementById("pdesignation").innerHTML = y;
-        z = document.getElementById("edesignation1").value
+        var y = document.getElementById("pdesignation").value
+        /*document.getElementById("pdesignation").innerHTML = y;
+        var z = document.getElementById("edesignation1").value
         document.getElementById("edesignation").innerHTML = z;
         
-        document.getElementById("e2designation").innerHTML = z;
-        a = document.getElementById("year1").value
+        document.getElementById("e2designation").innerHTML = z;*/
+        var a = document.getElementById("year1").value
         document.getElementById("year").innerHTML = a;
-        b = document.getElementById("month1").value
+        var b = document.getElementById("month1").value
         document.getElementById("month").innerHTML = b;
         document.getElementById("lname").innerHTML = x;
         document.getElementById('date').innerHTML = getDate();
+
+        var m = document.getElementById("choice11").value;
+        document.getElementById("choice1").innerHTML = m;
+        var n = document.getElementById("choice21").value;
+        document.getElementById("choice2").innerHTML = n;
+        var p = document.getElementById("choice31").value;
+        document.getElementById("choice3").innerHTML = p;
+
+        var comment1 = document.getElementById('istehar').value;
+        document.getElementById('comment').innerHTML = comment1;
+
         document.getElementById('frm1').style.display='none';
         document.getElementById('text').style.display = 'block';
         document.getElementById('displayBtn').style.display = 'block';
