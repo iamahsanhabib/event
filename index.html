@@ -43,7 +43,7 @@
             <div class="bengaliFont2" style="text-align: justify;">
                 ব্লাড এইড ব্যাংক, যশোর-এর আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে যোগদান করে
                 সংগঠনকে সামনের দিকে এগিয়ে নিতে আপনার তথ্য দিন। আপনার সম্পূর্ণ তথ্য অবশ্যই বাংলায় লিখতে
-                হবে। সহ সভাপতি অথবা সভাপতি পদে আসন লাভের জন্য অবশ্যই ২০২১-২২ অর্থবছরে আপনাকে সভাপতি, সহ-সভাপতি,
+                হবে। সহ সভাপতি অথবা সভাপতি পদে আসন লাভের জন্য অবশ্যই ২০২১-২২ অর্থবছরে আপনাকে
                 সভাপতি, সহ সভাপতি, সাধারণ সম্পাদক, যুগ্ম সাধারণ সম্পাদক, সাংগঠনিক সম্পাদক, সহ সাংগঠনিক সম্পাদক এর যেকোনো একটি
                 পদে থাকতে হবে। পূরণকৃত ফরম ডাউনলোড করে Email: <a href="mailto:bloodaidbankjashore@gmail.com">bloodaidbankjashore@gmail.com</a> এ আগামী ১৮ তারিখের ভিতর
                 পাঠাতে হবে।
@@ -218,11 +218,13 @@
             <div style="font-size: 24px; font-weight: bold;">মনোনয়ন ফরম</div>
             <div>তারিখঃ<span id="date"></span></div>
         </div>
+        <div style="padding: 0px 5px;">
+
         <div class="bengaliFont2" style="margin-top: 20px;">
             <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি <span id="fname"></span> গত <span id="month"></span>, <span id="year"></span> সাল থেকে ব্লাড এইড ব্যাংক, যশোরের 
-                একজন সদস্য। গত ২০২১-২২ অর্থবছরে
+                একজন সদস্য। গত ২০২১-২১ অর্থবছরে
                 আমি <span id="pdesignation"></span> হিসেবে ব্লাড এইড ব্যাংক, যশোরে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটির উপযুক্ত সদস্য হিসেবে
-                নিষ্ঠার সাথে দায়িত্ব পালন করতে ইচ্ছুক। এমতাবস্থায়, আমাকে কার্যনির্বাহী কমিটির নির্বাচনে সদস্য হিসেবে মনোনিত করার
+                নিষ্ঠার সাথে দায়িত্ব পালন করতে ইচ্ছুক। এমতাবস্থায়, আমাকে কার্যনির্বাহী কমিটির সদস্য হিসেবে মনোনিত করার
                 জন্য আমার পছন্দক্রম প্রদান করলাম।
             </p>
         </div>
@@ -236,8 +238,8 @@
             মনোনয়নের ক্ষেত্রে আমার পছন্দের অনুক্রমঃ
             <p style="margin-left: 40px;">
                 ১। <span id="choice1"></span> <br>
-                ২। <span id="choice2"></span> <br>
-                ৩। <span id="choice3"></span> <br>
+                ১। <span id="choice2"></span> <br>
+                ১। <span id="choice3"></span> <br>
             </p>
         </div>
         <div class="bengaliFont2">
@@ -246,6 +248,7 @@
                 
             </p>
         </div>
+    </div>
         
     </div>
     <br>
@@ -277,11 +280,8 @@
         
         document.getElementById("fname").innerHTML = x;
         var y = document.getElementById("pdesignation").value
-        /*document.getElementById("pdesignation").innerHTML = y;
-        var z = document.getElementById("edesignation1").value
-        document.getElementById("edesignation").innerHTML = z;
-        
-        document.getElementById("e2designation").innerHTML = z;*/
+        document.getElementById("pdesignation").innerHTML = y;
+
         var a = document.getElementById("year1").value
         document.getElementById("year").innerHTML = a;
         var b = document.getElementById("month1").value
