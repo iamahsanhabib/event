@@ -13,10 +13,41 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>মনোনয়ন পত্র</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+        @import url('./font/Kalpurush.ttf');
+        @import url('./font/NotoFont.ttf');
+
+        .bengaliFont {
+            font-family: 'Galada', cursive;
+        }
+        .bengaliFont2 {
+            font-family: 'Kalpurush';
+            font-size: 20px;
+        }
+        .bengaliFont3 {
+            font-family: 'NotoFont';
+        }
+    </style>
 </head>
 <body style="margin: 20px 40px; padding: 20px;">
-    <div style="display: block;" id="frm1">
+    <div style="display: block; background-color: rgb(214, 245, 235); padding: 10px; border-radius: 10px;" id="frm1">
         <form action="">
+            <div class="bengaliFont2"style="text-align:center">
+                <div style="font-size: 14px;margin-bottom: 20px;">বিসমিল্লাহির রাহমানির রাহীম</div>
+                <div style="font-size: 30px; font-weight: bold;">ব্লাড এইড ব্যাংক, যশোর</div>
+                <div style="font-size: 10px;;">স্থাপিতঃ ১৫ নভেম্বর, ২০১৯</div>
+                <hr>
+            </div>
+            <div class="bengaliFont2">
+                ব্লাড এইড ব্যাংক, যশোর-এর আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে যোগদান করে
+                সংগঠনকে সামনের দিকে এগিয়ে নিতে আপনার তথ্য দিন। আপনার সম্পূর্ণ তথ্য অবশ্যই বাংলায় লিখতে
+                হবে। সহ সভাপতি অথবা সভাপতি পদে আসন লাভের জন্য অবশ্যই ২০২১-২২ অর্থবছরে আপনাকে সভাপতি, সহ-সভাপতি,
+                সভাপতি, সহ সভাপতি, সাধারণ সম্পাদক, যুগ্ম সাধারণ সম্পাদক, সাংগঠনিক সম্পাদক, সহ সাংগঠনিক সম্পাদক এর যেকোনো একটি
+                পদে থাকতে হবে। পূরণকৃত ফরম ডাউনলোড করে Email: <a href="mailto:bloodaidbankjashore@gmail.com">bloodaidbankjashore@gmail.com</a> এ আগামী ১৮ তারিখের ভিতর
+                পাঠাতে হবে।
+            </div><br>
             <div class="form-group">
                 <label for="name">নামঃ </label>
                 <input class="form-control" type="text" id="name" required>
@@ -25,16 +56,106 @@
                 <label for="pdesignation">পূর্ব পদবিঃ </label>
                 <select class="form-control" name="pdesignation1" id="pdesignation1">
                     <option value="সভাপতি">সভাপতি</option>
+                    <option value="সহ সভাপতি">সহ সভাপতি</option>
                     <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
+                    <option value="যুগ্ন সাধারণ সম্পাদক">যুগ্ন সাধারণ সম্পাদক</option>
+                    <option value="সাংগঠনিক সম্পাদক">সাংগঠনিক সম্পাদক</option>
+                    <option value="সহ সাংগঠনিক সম্পাদক ">সহ সাংগঠনিক সম্পাদক </option>
+                    <option value="অর্থ সম্পাদক ">অর্থ সম্পাদক </option>
+                    <option value="সহ অর্থ সম্পাদক ">সহ অর্থ সম্পাদক</option>
+                    <option value="প্রচার সম্পাদক">প্রচার সম্পাদক</option>
+                    <option value="সহ প্রচার সম্পাদক">সহ প্রচার সম্পাদক</option>
+                    <option value="দপ্তর সম্পাদক ">দপ্তর সম্পাদক </option>
+                    <option value="সহ দপ্তর সম্পাদক ">সহ দপ্তর সম্পাদক</option>
+                    <option value="স্বাস্থ্যবিধি বিষয়ক সম্পাদক">স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                    <option value="সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক">সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                    <option value="তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                    <option value="সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                    <option value="নারী বিষয়ক সম্পাদক">নারী বিষয়ক সম্পাদক</option>
+                    <option value="সহ নারী বিষয়ক সম্পাদক">সহ নারী বিষয়ক সম্পাদক</option>
+                    <option value="কার্যনির্বাহী সদস্য">কার্যনির্বাহী সদস্য</option>
+                    <option value="সদস্য">সদস্য</option>
                 </select>  
             </div>
-            <div class="form-group">
-                <label for="edesignation1">মনোনয়ন পদবিঃ </label>
-                <select class="form-control" name="edesignation1" id="edesignation1">
-                    <option value="সভাপতি">সভাপতি</option>
-                    <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
-                </select>  
+            <div class="row">
+                <div class="col-4 form-group">
+                    <label for="edesignation1">মনোনয়ন পদবি-১ঃ </label>
+                    <select class="form-control" name="edesignation1" id="edesignation1">
+                        <option value="সভাপতি">সভাপতি</option>
+                        <option value="সহ সভাপতি">সহ সভাপতি</option>
+                        <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
+                        <option value="যুগ্ন সাধারণ সম্পাদক">যুগ্ন সাধারণ সম্পাদক</option>
+                        <option value="সাংগঠনিক সম্পাদক">সাংগঠনিক সম্পাদক</option>
+                        <option value="সহ সাংগঠনিক সম্পাদক ">সহ সাংগঠনিক সম্পাদক </option>
+                        <option value="অর্থ সম্পাদক ">অর্থ সম্পাদক </option>
+                        <option value="সহ অর্থ সম্পাদক ">সহ অর্থ সম্পাদক</option>
+                        <option value="প্রচার সম্পাদক">প্রচার সম্পাদক</option>
+                        <option value="সহ প্রচার সম্পাদক">সহ প্রচার সম্পাদক</option>
+                        <option value="দপ্তর সম্পাদক ">দপ্তর সম্পাদক </option>
+                        <option value="সহ দপ্তর সম্পাদক ">সহ দপ্তর সম্পাদক</option>
+                        <option value="স্বাস্থ্যবিধি বিষয়ক সম্পাদক">স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                        <option value="সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক">সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                        <option value="তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                        <option value="সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                        <option value="নারী বিষয়ক সম্পাদক">নারী বিষয়ক সম্পাদক</option>
+                        <option value="সহ নারী বিষয়ক সম্পাদক">সহ নারী বিষয়ক সম্পাদক</option>
+                        <option value="কার্যনির্বাহী সদস্য">কার্যনির্বাহী সদস্য</option>
+                        <option value="সদস্য">সদস্য</option>
+                    </select> 
+                </div>
+                <div class="col-4 form-group">
+                    <label for="edesignation1">মনোনয়ন পদবি-২ঃ </label>
+                    <select class="form-control" name="edesignation1" id="edesignation1">
+                        <option value="সভাপতি">সভাপতি</option>
+                        <option value="সহ সভাপতি">সহ সভাপতি</option>
+                        <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
+                        <option value="যুগ্ন সাধারণ সম্পাদক">যুগ্ন সাধারণ সম্পাদক</option>
+                        <option value="সাংগঠনিক সম্পাদক">সাংগঠনিক সম্পাদক</option>
+                        <option value="সহ সাংগঠনিক সম্পাদক ">সহ সাংগঠনিক সম্পাদক </option>
+                        <option value="অর্থ সম্পাদক ">অর্থ সম্পাদক </option>
+                        <option value="সহ অর্থ সম্পাদক ">সহ অর্থ সম্পাদক</option>
+                        <option value="প্রচার সম্পাদক">প্রচার সম্পাদক</option>
+                        <option value="সহ প্রচার সম্পাদক">সহ প্রচার সম্পাদক</option>
+                        <option value="দপ্তর সম্পাদক ">দপ্তর সম্পাদক </option>
+                        <option value="সহ দপ্তর সম্পাদক ">সহ দপ্তর সম্পাদক</option>
+                        <option value="স্বাস্থ্যবিধি বিষয়ক সম্পাদক">স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                        <option value="সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক">সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                        <option value="তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                        <option value="সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                        <option value="নারী বিষয়ক সম্পাদক">নারী বিষয়ক সম্পাদক</option>
+                        <option value="সহ নারী বিষয়ক সম্পাদক">সহ নারী বিষয়ক সম্পাদক</option>
+                        <option value="কার্যনির্বাহী সদস্য">কার্যনির্বাহী সদস্য</option>
+                        <option value="সদস্য">সদস্য</option>
+                    </select> 
+                </div>
+                <div class="col-4 form-group">
+                    <label for="edesignation1">মনোনয়ন পদবি-২ঃ </label>
+                    <select class="form-control" name="edesignation1" id="edesignation1">
+                        <option value="সভাপতি">সভাপতি</option>
+                        <option value="সহ সভাপতি">সহ সভাপতি</option>
+                        <option value="সাধারণ সম্পাদক">সাধারণ সম্পাদক</option>
+                        <option value="যুগ্ন সাধারণ সম্পাদক">যুগ্ন সাধারণ সম্পাদক</option>
+                        <option value="সাংগঠনিক সম্পাদক">সাংগঠনিক সম্পাদক</option>
+                        <option value="সহ সাংগঠনিক সম্পাদক ">সহ সাংগঠনিক সম্পাদক </option>
+                        <option value="অর্থ সম্পাদক ">অর্থ সম্পাদক </option>
+                        <option value="সহ অর্থ সম্পাদক ">সহ অর্থ সম্পাদক</option>
+                        <option value="প্রচার সম্পাদক">প্রচার সম্পাদক</option>
+                        <option value="সহ প্রচার সম্পাদক">সহ প্রচার সম্পাদক</option>
+                        <option value="দপ্তর সম্পাদক ">দপ্তর সম্পাদক </option>
+                        <option value="সহ দপ্তর সম্পাদক ">সহ দপ্তর সম্পাদক</option>
+                        <option value="স্বাস্থ্যবিধি বিষয়ক সম্পাদক">স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                        <option value="সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক">সহ স্বাস্থ্যবিধি বিষয়ক সম্পাদক</option>
+                        <option value="তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                        <option value="সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক">সহ তথ্যপ্রযুক্তি বিষয়ক সম্পাদক</option>
+                        <option value="নারী বিষয়ক সম্পাদক">নারী বিষয়ক সম্পাদক</option>
+                        <option value="সহ নারী বিষয়ক সম্পাদক">সহ নারী বিষয়ক সম্পাদক</option>
+                        <option value="কার্যনির্বাহী সদস্য">কার্যনির্বাহী সদস্য</option>
+                        <option value="সদস্য">সদস্য</option>
+                    </select> 
+                </div>
             </div>
+             
+            
             <div class="row">
                 <div class="col-6 form-group">
                     <label for="year">সংগঠনে যোগদানের বছরঃ</label>
@@ -62,39 +183,48 @@
                         <option value="ডিসেম্বর">ডিসেম্বর</option>
                     </select>
                 </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="istehar">মতামতঃ</label>
+                <textarea class="form-control" name="istehar" id="istehar" cols="30" rows="8" placeholder="আপনি কাঙ্ক্ষিত পদটি পেলে আগামী ১ বছর সংগঠন নিয়ে আপনার চিন্তা ভাবনা ৫ লাইনে লিখুন..."></textarea>
             </div>
         </form>
-        <div style="text-align: center;">
+        <div style="text-align: center;" id="submitBtn">
             <button class="btn btn-primary" onclick="saveInfo()">Save</button>
-        </div><br><br>
+        </div><br>
         
     </div>
 
     <div id ="text" style="display: none;">
-        <div style="display: flex;justify-content:space-between ;">
-            <div>
-                <img src="./img/bloodbankicon.jpg" alt="ambulange" height="100px" width="100px">
+        <div class="row" style="margin-bottom: 0">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <img src="./img/babj.png" alt="ambulange" height="120px" width="120px">
             </div>
-            <div style="text-align: center;">
-                <p style="font-size: 14px; margin-bottom: 0;">বিসমিল্লাহির রাহমানির রাহীম</p>
-                <p style="font-size: 30px; margin-bottom: 0;">ব্লাড এইড ব্যাংক, যশোর</p>
-                <p style="font-size: 10px; margin-bottom: 0;">স্থাপিতঃ ১৫ নভেম্বর, ২০১৯</p>
+            <div class="col-7" style="display:inline-block ;">
+                <div class="bengaliFont2"style="text-align:center">
+                    <div style="font-size: 14px;margin-bottom: 20px;">বিসমিল্লাহির রাহমানির রাহীম</div>
+                    <div style="font-size: 30px; font-weight: bold;">ব্লাড এইড ব্যাংক, যশোর</div>
+                    <div style="font-size: 10px;;">স্থাপিতঃ ১৫ নভেম্বর, ২০১৯</div>
+                </div>
             </div>
-            <div></div>
+            <div class="col-2"></div>
         </div>
-        <hr>
-        <div style="display: flex; justify-content: space-between;">
+        
+        <hr style="margin-bottom: 0">
+        <div style="display: flex; justify-content: space-between;margin-top: 0;">
             <div>সূত্রঃ </div>
-            <div style="font-size: 24px;">মনোনয়ন ফরম</div>
-            <div>তারিখঃ</div>
+            <div style="font-size: 24px; font-weight: bold;">মনোনয়ন ফরম</div>
+            <div>তারিখঃ<span id="date"></span></div>
         </div>
-        <div>
-            <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি <span id="fname"></span> গত <span id="month"></span>, <span id="year"></span> সাল থেকে ব্লাড এইড ব্যাংক, যশোরের একজন সদস্য। গত ২০২১-২২ অর্থবছরে
-                আমি <span id="pdesignation"></span> হিসেবে ব্লাড ব্যাংকে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে <span id="edesignation"></span> হিসেবে
+        <div class="bengaliFont2" style="margin-top: 30px;">
+            <p style="text-align: justify;"> এই মর্মে প্রত্যয়ন করছি যে, আমি <span id="fname"></span> গত <span id="month"></span>, <span id="year"></span> সাল থেকে ব্লাড এইড ব্যাংক, যশোরের একজন সদস্য। গত ২০২১-২১ অর্থবছরে
+                আমি <span id="pdesignation"></span> হিসেবে ব্লাড এইড ব্যাংক, যশোরে দায়িত্ব পালন করেছি। আগামী ২০২২-২৩ অর্থবছরে কার্যনির্বাহী কমিটিতে <span id="edesignation"></span> হিসেবে
                 নিষ্ঠার সাথে দায়িত্ব পালন করতে ইচ্ছুক।
             </p>
         </div>
-        <div>
+        <div class="bengaliFont2">
             <p style="text-align: justify;"> আমি <span id="lname"></span>, এই মর্মে অঙ্গীকার করছি যে সংগঠনের সব রকম
                 নীতিমালা মেনে সংগঠনের সাফল্যের লক্ষ্যে আগামী ১ বছর সংগঠনের <span id="e2designation"></span> হয়ে সংগঠনকে নিরপেক্ষভাবে
                 এগিয়ে নিয়ে যাবো ও সকল গঠনতন্ত্র মেনে চলিবো।
@@ -105,14 +235,32 @@
         
     </div>
     <br>
-    <button id ="d" onclick="dwn()">Download</button>
+    <div id="displayBtn" style="display: none; text-align: center;">
+        <button id ="d" class="btn btn-primary" onclick="dwn()">Download</button>
+    </div>
+    
 </body>
 
 
 <script>
+    function getDate(){
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+
+        const formattedToday = dd + '/' + mm + '/' + yyyy;
+
+        return formattedToday;
+    }
+
     function saveInfo(){
         
         var x = document.getElementById("name").value;
+        
         document.getElementById("fname").innerHTML = x;
         var y = document.getElementById("pdesignation1").value
         document.getElementById("pdesignation").innerHTML = y;
@@ -125,17 +273,19 @@
         b = document.getElementById("month1").value
         document.getElementById("month").innerHTML = b;
         document.getElementById("lname").innerHTML = x;
+        document.getElementById('date').innerHTML = getDate();
         document.getElementById('frm1').style.display='none';
         document.getElementById('text').style.display = 'block';
+        document.getElementById('displayBtn').style.display = 'block';
         //document.getElementById("istehar").innerHTML = x.elements[3].value;
     }
     function dwn() {
         const element = document.getElementById("text");
         //console.log(element);
-        name = 'Ahsan';
+        var name = document.getElementById("name").value;
         var opt = {
         margin:       1,
-        filename:     name+'.pdf',
+        filename:     name+'-'+ getDate()+'.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
